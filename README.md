@@ -1,5 +1,5 @@
 # Simulador de Renda Fixa Pré e Pós
-Existem. vários simuladores de Renda Fixa Pré e Pós fixados no mercado. Mas maioria deles não tem as taxas atualizadas automaticamente ou não fazem a projeção do CDI futuro da maneira correta. Esse projeto foi criado pelos desenvolvedores da Easynvest, onde o objetivo é entregar um simulador de Renda Fixa para o mercado, projetando o CDI futuro com taxas atualizadas diretamente da Anbima.
+Existem vários simuladores de Renda Fixa Pré e Pós fixados no mercado. Mas a maioria deles não tem as taxas atualizadas automaticamente ou não fazem a projeção do CDI futuro da maneira correta. Esse projeto foi criado pelos desenvolvedores da Easynvest, onde o objetivo é entregar um simulador de Renda Fixa para o mercado, projetando o CDI futuro com taxas atualizadas diretamente da Anbima.
 
 Você pode ver esse simulador funcionando aqui:
 [https://easynvest.github.io/simulador-rendafixa/](https://easynvest.github.io/simulador-rendafixa/)
