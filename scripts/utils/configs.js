@@ -1,7 +1,7 @@
 (
     function() {
         simulator.configs = {
-            URL_API_SIMULATOR: 'https://easynvestsimulatorcalcapi.azurewebsites.net/calculator/simulate'
+            URL_API_SIMULATOR: 'http://api-simulator-calc.us-east-1.elasticbeanstalk.com//calculator/simulate'
         }
     }
 )()
