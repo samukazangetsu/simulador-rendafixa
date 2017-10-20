@@ -17,11 +17,11 @@ A API que calcula o os valores futuros se encontram em [outro projeto Open Sourc
  - **Method**: GET
  - **URL Params**:
     ```javascript
-        ?investedAmount = 32323.0                 // Valor a investir em reais
-        &index = "CDI"                            // Índice, por enquanto só CDI disponível
-        &rate = 123                               // Percentual do papel
-        &isTaxFree = false                        // Isento de IR, por enquanto só falso
-        &maturityDate = "2023-03-03"              // Data do vencimento, no formato ano-mes-dia
+        investedAmount = 32323.0                 // Valor a investir em reais
+        index = "CDI"                            // Índice, por enquanto só CDI disponível
+        rate = 123                               // Percentual do papel
+        isTaxFree = false                        // Isento de IR, por enquanto só falso
+        maturityDate = "2023-03-03"              // Data do vencimento, no formato ano-mes-dia
     
     ```
  - **Response**
