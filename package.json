@@ -6,7 +6,8 @@
   "scripts": {
     "start": "http-server .",
     "lint": "eslint scripts/**/*.js",
-    "build": "gulp minify"
+    "build": "gulp minify",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "eslint": "^4.8.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "http-server": "^0.10.0"
+    "http-server": "^0.10.0",
+    "jest": "^21.2.1"
   }
 }
