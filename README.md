@@ -1,4 +1,4 @@
-# Simulador de Renda Fixa Pré e Pós
+# Simulador de Renda Fixa Pré e Pós [![Build Status](https://travis-ci.org/rafaellucio/simulador-rendafixa.svg?branch=master)](https://travis-ci.org/rafaellucio/simulador-rendafixa)
 Existem vários simuladores de Renda Fixa Pré e Pós fixados no mercado. Mas a maioria deles não tem as taxas atualizadas automaticamente ou não fazem a projeção do CDI futuro da maneira correta. Esse projeto foi criado pelos desenvolvedores da Easynvest, onde o objetivo é entregar um simulador de Renda Fixa para o mercado, projetando o CDI futuro com taxas atualizadas diretamente da Anbima.
 
 Você pode ver esse simulador funcionando aqui:
@@ -22,7 +22,7 @@ A API que calcula o os valores futuros se encontram em [outro projeto Open Sourc
         rate = 123                               // Percentual do papel
         isTaxFree = false                        // Isento de IR, por enquanto só falso
         maturityDate = "2023-03-03"              // Data do vencimento, no formato ano-mes-dia
-    
+
     ```
  - **Response**
     ```javascript
