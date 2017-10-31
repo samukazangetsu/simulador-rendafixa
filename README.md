@@ -8,7 +8,7 @@ Você pode ver esse simulador funcionando aqui:
 Execute o famoso
 `npm install && npm start`
 e tudo pronto para começar. :D
-(screenshot.png)
+![alt Página Inicial](https://easynvest.github.io/simulador-rendafixa/screenshot.png)
 
 ## Consumindo o serviço de cálculo
 A API que calcula o os valores futuros se encontram em [outro projeto Open Source, aqui](https://github.com/easynvest/api-simulator-calc). Abaixo segue algumas informações sobre como utilizamos esse serviço no nosso simulador.
