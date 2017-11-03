@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/easynvest/simulador-rendafixa#readme",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.17.0",
     "moment": "^2.18.1",
     "text-mask-addons": "^3.6.0",
     "vanilla-masker": "^1.2.0",
@@ -48,6 +48,7 @@
     "gulp-concat": "^2.6.1",
     "http-server": "^0.10.0",
     "husky": "^0.14.3",
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "npm-check-updates": "^2.13.0"
   }
 }
