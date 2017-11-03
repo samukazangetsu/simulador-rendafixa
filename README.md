@@ -12,6 +12,7 @@ Você pode ver esse simulador funcionando aqui:
 Execute o famoso
 `npm install && npm start`
 e tudo pronto para começar. :D
+
 ![alt Página Inicial](/screenshot.png?raw=true)
 
 ## Consumindo o serviço de cálculo
