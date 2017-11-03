@@ -1,4 +1,4 @@
 const simulator = {
-    results: {},
-    simulation: {}
+  results: {},
+  simulation: {}
 }
