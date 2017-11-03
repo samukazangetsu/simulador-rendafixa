@@ -5,4 +5,4 @@ cache:
     - node_modules
 after_success:
   - 'npm run coveralls'
-  - 'npm run codacy'
+  - 'CODACY_PROJECT_TOKEN=$CODACY_PROJECT_TOKEN npm run codacy'
