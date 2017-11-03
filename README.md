@@ -1,4 +1,5 @@
-# Simulador de Renda Fixa Pré e Pós [![Build Status](https://travis-ci.org/rafaellucio/simulador-rendafixa.svg?branch=master)](https://travis-ci.org/rafaellucio/simulador-rendafixa)
+# Simulador de Renda Fixa Pré e Pós 
+[![Build Status](https://travis-ci.org/rafaellucio/simulador-rendafixa.svg?branch=master)](https://travis-ci.org/rafaellucio/simulador-rendafixa) 
 [![Coverage Status](https://coveralls.io/repos/github/easynvest/simulador-rendafixa/badge.svg?branch=master)](https://coveralls.io/github/easynvest/simulador-rendafixa?branch=master)
 
 Existem vários simuladores de Renda Fixa Pré e Pós fixados no mercado. Mas a maioria deles não tem as taxas atualizadas automaticamente ou não fazem a projeção do CDI futuro da maneira correta. Esse projeto foi criado pelos desenvolvedores da Easynvest, onde o objetivo é entregar um simulador de Renda Fixa para o mercado, projetando o CDI futuro com taxas atualizadas diretamente da Anbima.
