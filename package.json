@@ -8,7 +8,20 @@
     "lint": "eslint scripts/**/*.js",
     "lint:watch": "esw scripts/**/* --watch",
     "build": "gulp minify",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "test:watch": "jest --watch",
+    "precommit": "npm test",
+    "prepush": "npm test"
+  },
+  "jest": {
+    "modulePaths": [
+      "scripts/"
+    ],
+    "collectCoverageFrom": [
+      "scripts/**/*.{js,jsx}",
+      "!scripts/**/(index|*.storybook|*.mock).js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -34,6 +47,7 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "http-server": "^0.10.0",
+    "husky": "^0.14.3",
     "jest": "^21.2.1"
   }
 }
