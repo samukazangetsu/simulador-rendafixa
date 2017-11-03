@@ -1,35 +1,35 @@
 (
-    function() {
-        simulator.simulation.handleSimulate = function (e) {
-            e.preventDefault()
-            
-            simulator.simulation.elements.simulateButton.classList.add('loading')
-            simulator.simulation.elements.simulateButton.setAttribute('disabled', '')
+  function() {
+    simulator.simulation.handleSimulate = function (e) {
+      e.preventDefault()
 
-            const investedAmount = simulator.simulation.elements.investedAmount
-                .value
-                .replace(/\./g, '')
-                .replace(/\,/g, '.')
-                .replace('R$', '')
-                .trim()
+      simulator.simulation.elements.simulateButton.classList.add('loading')
+      simulator.simulation.elements.simulateButton.setAttribute('disabled', '')
 
-            const rate = simulator.simulation.elements.rate
-                .value
-                .replace(/\,/g, '.')
-                .replace('%', '')
-                .trim()
+      const investedAmount = simulator.simulation.elements.investedAmount
+        .value
+        .replace(/\./g, '')
+        .replace(/\,/g, '.')
+        .replace('R$', '')
+        .trim()
 
-            const maturityDate = simulator.dateParsers.toAPI(
-                simulator.simulation.elements.maturityDate.value
-            )
-            
-            const params = new URLSearchParams()
-            params.append('investedAmount', investedAmount)
-            params.append('rate', rate)
-            params.append('maturityDate', maturityDate)
+      const rate = simulator.simulation.elements.rate
+        .value
+        .replace(/\,/g, '.')
+        .replace('%', '')
+        .trim()
 
-            window.location.href = `results?${params.toString()}`
-        }
+      const maturityDate = simulator.dateParsers.toAPI(
+        simulator.simulation.elements.maturityDate.value
+      )
 
+      const params = new URLSearchParams()
+      params.append('investedAmount', investedAmount)
+      params.append('rate', rate)
+      params.append('maturityDate', maturityDate)
+
+      window.location.href = `results?${params.toString()}`
     }
+
+  }
 )()
