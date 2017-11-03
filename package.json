@@ -10,6 +10,7 @@
     "build": "gulp minify",
     "test": "jest --coverage",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "codacy": "cat ./coverage/lcov.info | codacy-coverage",
     "test:watch": "jest --watch",
     "precommit": "npm test",
     "prepush": "npm test"
@@ -41,6 +42,7 @@
     "vanilla-text-mask": "^5.0.1"
   },
   "devDependencies": {
+    "codacy-coverage": "^2.0.3",
     "coveralls": "^3.0.0",
     "eslint": "^4.8.0",
     "eslint-watch": "^3.1.3",
