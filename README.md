@@ -67,15 +67,14 @@ Se você for escrever código, por favor, preste atenção aos detalhes do `.edi
 Se você encontrar um problema e se empolgar para fazer um Pull Request, por favor, crie uma Issue para que seu Pull Request fique atrelado à ele, assim teremos um histórico saudável de problemas reportados + soluções enviadas.
 
 
-## Guia de Estilo Git
+# Guia de Estilo Git
 
 1. [Branches](#branches)
 2. [Commits](#commits)
   1. [Menssagens](#mensagens)
-3. [Merging](#merging)
-4. [Misc.](#misc)
+3. [Merge](#merge)
 
-### Branches
+## Branches
 
 Segue referência criação das branches [Git flow](https://danielkummer.github.io/git-flow-cheatsheet/index.pt_BR.html)
 
@@ -99,7 +98,7 @@ Dica: Use o seguinte comando quando estiver no `master`, para listas os branchs 
 $ git branch --merged | grep -v "\*"
 ```
 
-### Commits
+## Commits
 
 * Cada commit deve ser uma *mudança lógica* simples. Não faça várias *mudanças lógicas* em um commit. Por exemplo, se uma alteração corrige um bug e otimiza a performance de uma funcionalidade, o divida em dois commits separados.
 
@@ -109,7 +108,7 @@ $ git branch --merged | grep -v "\*"
 
 * Commits devem ser ordenados *logicamente*. Por exemplo, se *commit X* depende de uma mudança feita no *commit Y*, então *commit Y* deve vir antes do *commit X*.
 
-### Mensagens:
+## Mensagens:
 
 ```
 <tipo>(<scopo>): <assunto>
@@ -171,6 +170,48 @@ As issues devem ser listadas e separadas por virgula com o prefixo "Closes"
 Ou
 
 `Closes #123, #245, #992`
+
+## Merge
+
+* **Não reescreva histórico publicado.** O histórico do repositório é valioso a sua maneira e muito importante para permitir dizer *o que realmente aconteceu*.
+Alterar histórico publicado é uma fonte comum de problemas para qualquer um que trabalhe no projeto.
+
+* Contudo, há casos em que reescrever o histórico é legítimo. Estes são quando:
+
+* Você é o único trabalhando no branch e não está sendo inspecionado.
+
+* Você quer arrumar seu branch (eg. commits squash ) e/ou realizar rebase dele para o "master" para realizar o merge depois.
+
+Dito isso, *nunca reescreva o histórico do branch "master"* ou quaisquer branchs especiais (ie. usado em produção ou servidores de Integração Contínua).
+
+* Mantenha o histórico *limpo* e *simples*. *Bem antes de realizar o merge* em seu branch:
+
+1. Tenha certeza que está em conformidade com o guia de estilo e realize qualquer ação necessária se não (squash/reordenar seus commits, refazer mensagens etc.)
+
+2. Rebase em outro branch em que será feito:
+
+```shell
+[meu-branch] $ git fetch
+[meu-branch] $ git rebase origin/master
+# então merge
+```
+
+Isto resulta em um branch que pode ser diretamente aplicado no final do
+branch "master" e resulta em um histórico bem simples.
+
+*(Nota: Esta estratégia é mais adequada para projetos com branches
+recentes. Caso contrário é melhor ocasionalmente realizar o merge do
+branch "master" em vez de fazer rebase nele.)*
+
+* Se seu branch inclui mais de um commit, não faça merge como um branch avançado:
+
+```shell
+# bom - garante que o commit de merge seja criado
+$ git merge --no-ff meu-branch
+
+# ruim
+$ git merge meu-branch
+```
 
 # Licença - Apache 2.0
 Esse projeto é OpenSource e aberto para qualquer um contribuir sob a licença *Apache 2.0*, que é compatível com a licença GPL de software livre.
