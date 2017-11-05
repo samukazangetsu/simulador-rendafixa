@@ -1,5 +1,5 @@
 # Simulador de Renda Fixa Pré e Pós
-[![Build Status](https://travis-ci.org/rafaellucio/simulador-rendafixa.svg?branch=master)](https://travis-ci.org/rafaellucio/simulador-rendafixa)
+[![Build Status](https://travis-ci.org/easynvest/simulador-rendafixa.svg?branch=master)](https://travis-ci.org/easynvest/simulador-rendafixa)
 [![Coverage Status](https://coveralls.io/repos/github/easynvest/simulador-rendafixa/badge.svg?branch=master)](https://coveralls.io/github/easynvest/simulador-rendafixa?branch=master)
 [![Dependencies Status](https://david-dm.org/easynvest/simulador-rendafixa.svg)](https://david-dm.org/easynvest/simulador-rendafixa)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7634f98fb53045548db4e92b0e5e8d3a)](https://www.codacy.com/app/easynvest/simulador-rendafixa?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=easynvest/simulador-rendafixa&amp;utm_campaign=Badge_Grade)
