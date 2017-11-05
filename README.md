@@ -66,6 +66,112 @@ Se você for escrever código, por favor, preste atenção aos detalhes do `.edi
 
 Se você encontrar um problema e se empolgar para fazer um Pull Request, por favor, crie uma Issue para que seu Pull Request fique atrelado à ele, assim teremos um histórico saudável de problemas reportados + soluções enviadas.
 
+
+## Guia de Estilo Git
+
+1. [Branches](#branches)
+2. [Commits](#commits)
+  1. [Menssagens](#mensagens)
+3. [Merging](#merging)
+4. [Misc.](#misc)
+
+### Branches
+
+Segue referência criação das branches [Git flow](https://danielkummer.github.io/git-flow-cheatsheet/index.pt_BR.html)
+
+* Escolha nomes *pequenos* e *descritivos*:
+
+```shell
+# bom
+$ git checkout -b feature/oauth-migration
+
+# ruim - muito vago
+$ git checkout -b login_fix
+```
+
+* Use *hifens* para separar palavras.
+
+* Delete sua branch do repositório upstream após ele ter sido mergeado, à menos que tenho uma boa razão pra ela continuar la.
+
+Dica: Use o seguinte comando quando estiver no `master`, para listas os branchs mergeadas:
+
+```shell
+$ git branch --merged | grep -v "\*"
+```
+
+### Commits
+
+* Cada commit deve ser uma *mudança lógica* simples. Não faça várias *mudanças lógicas* em um commit. Por exemplo, se uma alteração corrige um bug e otimiza a performance de uma funcionalidade, o divida em dois commits separados.
+
+* Não divida uma *mudança lógica* simples em vários commits. Por exemplo, a implementação de uma funcionalidade e os testes correspondentes à ela devem estar no mesmo commit.
+
+* Commit *cedo* e *frequentemente*. Commits pequenos e autônomos são mais fáceis de entender e reverter quando algo dá errado.
+
+* Commits devem ser ordenados *logicamente*. Por exemplo, se *commit X* depende de uma mudança feita no *commit Y*, então *commit Y* deve vir antes do *commit X*.
+
+### Mensagens:
+
+```
+<tipo>(<scopo>): <assunto>
+
+<corpo>
+
+<rodape>
+```
+
+Exemplo de mensagem de commit:
+
+```
+fix(auth): Corrige autenticação quando passa o e-mail
+
+Adiciona uma nova dependencia.
+
+Fixes #2310
+
+```
+
+**Mensagem `<assunto>`:**
+
+A primeira linha não pode passar de 70 caracteres, a segunda linha está sempre em branco e outras linhas devem ser envolvidas em 80 caracteres. O tipo e o escopo sempre devem ser minúsculos como mostrado abaixo.
+
+**Mensagem `<tipo>`**
+_Permitidos:_
+
+- feat (nova feature para usuário, não é uma nova feature para build ou scripts)
+- fix (bug fix para o usuário, não é uma nova fix para build ou scripts)
+- docs (mudança em documentação)
+- style (formatação, espaços, identação, etc; sem mudança no código de prod)
+- refactor (refatorando código de produção, tal como, renomeando variáveis)
+- test (adição de testes, refatorar testes; sem mudança no código de prod)
+- chore (atualização de tasks de build, etc; sem mudançao no código de prod)
+
+**Exemplo de `<escopo>`**
+
+- registry-completion
+- legacy-wrapper
+- symbol-base
+- config
+- etc.
+
+O <escopo> pode estar vazio (por exemplo, se a mudança for global ou difícil de atribuir a um único componente), caso em que os parênteses são omitidos.
+
+**Mensagem do `<corpo>`**
+
+Usar o imperativo no presente "altera" não "alterado" nem "alterações"
+inclui motivação para a mudança e contrasta com o comportamento anterior
+
+**Mensagem do `<rodape>`**
+
+Referenciando `issues`
+
+As issues devem ser listadas e separadas por virgula com o prefixo "Closes"
+
+`Closes #234`
+
+Ou
+
+`Closes #123, #245, #992`
+
 # Licença - Apache 2.0
 Esse projeto é OpenSource e aberto para qualquer um contribuir sob a licença *Apache 2.0*, que é compatível com a licença GPL de software livre.
 
