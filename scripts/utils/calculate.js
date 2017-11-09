@@ -1,5 +1,5 @@
 (
-  function() {
+  function () {
     simulator.calculate = function (params) {
       return axios.get(simulator.configs.URL_API_SIMULATOR, {
         params: {
@@ -8,10 +8,9 @@
           rate: params.rate,
           index: 'CDI',
           isTaxFree: false,
-        }
+        },
       })
         .then(response => response.data)
-        .catch(response => console.error(response))
-    }
-  }
-)()
+        .catch(response => console.error(response));
+    };
+  }());
