@@ -1,4 +1,0 @@
-const simulator = {
-  results: {},
-  simulation: {}
-}
