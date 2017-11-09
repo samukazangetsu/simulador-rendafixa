@@ -1,8 +1,8 @@
-import simulator from '../scripts/index'
+import simulator from '../scripts/index';
 
 describe('Simulator module', () => {
   it('should return object simulator', () => {
-    expect(simulator.hasOwnProperty('results')).toBeTruthy()
-    expect(simulator.hasOwnProperty('simulation')).toBeTruthy()
+    expect(Object.prototype.hasOwnProperty.call(simulator, 'results')).toBeTruthy();
+    expect(Object.prototype.hasOwnProperty.call(simulator, 'simulation')).toBeTruthy();
   });
-})
+});

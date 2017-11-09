@@ -1,6 +1,6 @@
 const simulator = {
   results: {},
-  simulation: {}
-}
+  simulation: {},
+};
 
-module.exports = simulator
+module.exports = simulator;
