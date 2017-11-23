@@ -1,6 +1,6 @@
 (
-  function() {
-    simulator.simulation.setMasks = function() {
+  function () {
+    simulator.simulation.setMasks = function () {
       vanillaTextMask.maskInput({
         inputElement: simulator.simulation.elements.investedAmount,
         mask: createNumberMask.default({
@@ -8,15 +8,15 @@
           thousandsSeparatorSymbol: '.',
           decimalSymbol: ',',
           allowDecimal: true,
-          integerLimit: 7
-        })
-      })
+          integerLimit: 7,
+        }),
+      });
 
       vanillaTextMask.maskInput({
         inputElement: simulator.simulation.elements.maturityDate,
         mask: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/],
-        guide: false
-      })
+        guide: false,
+      });
 
       vanillaTextMask.maskInput({
         inputElement: simulator.simulation.elements.rate,
@@ -26,9 +26,8 @@
           thousandsSeparatorSymbol: '.',
           decimalSymbol: ',',
           allowDecimal: true,
-          integerLimit: 3
-        })
-      })
-    }
-  }
-)()
+          integerLimit: 3,
+        }),
+      });
+    };
+  }());
